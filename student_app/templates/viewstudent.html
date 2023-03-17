@@ -1,0 +1,52 @@
+{% extends 'home.html' %}
+
+{% block content %}
+        <section class="content">
+            <div class="container-fluid" >
+                <div class="row" >
+                    <div class="col-12" style="margin-top: 150px;" >
+                        <div class="card" >
+                            <div class="card-header" >
+                                <h3 class="card-title">Students</h3>
+                            </div>
+                            <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>FName</th>
+                                    <th>LName</th>
+                                    <th>email</th>
+                                    <th>phone</th>
+                                    <th>Address1</th>
+                                    <th>Address2</th>
+                              
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for j in data %}
+                                <tr>
+                                    <td>{{j.fname}}</td>
+                                    <td>{{j.lname}}</td>
+                                    <td>{{j.email }}</td>
+                                    <td>{{j.phone}}</td>
+                                    <td>{{j.faddress}}</td>
+                                    <td>{{j.laddress}}</td>
+                                   
+                                    
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock %}
+<!-- /.content -->

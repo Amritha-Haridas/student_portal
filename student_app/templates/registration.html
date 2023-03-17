@@ -1,0 +1,49 @@
+{% extends 'home.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">        
+    <div class="row">
+
+    <div class="col-lg-6" style="margin-top: 100px;">
+<div>   
+   <form action="{% url 'getDetails' %}" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">FIRST NAME</label>
+      <input type="text" class="form-control" id="fname" aria-describedby="Standard" name="fname" >
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">LAST NAME</label>
+        <input type="text" class="form-control" id="lname" aria-describedby="Standard" name="lname" >
+      </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="Standard" name="email" >
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="phone" aria-describedby="Standard" name="phone">
+      </div>
+      <div class="mb-3">
+        <label for="msg" class="form-label">ADDRESS1</label>
+        <textarea class="form-control" id="faddress" rows="2" name="faddress"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="msg" class="form-label">ADDRESS2</label>
+        <textarea class="form-control" id="laddress" rows="2" name="laddress"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Password</label>
+        <input type="text" class="form-control" id="password" aria-describedby="Standard" name="password" >
+      </div>
+
+
+    <button type="submit" class="btn btn-primary">Register</button>
+
+  </form>
+</div>
+</div>
+</div>
+</div>
+  {% endblock %}

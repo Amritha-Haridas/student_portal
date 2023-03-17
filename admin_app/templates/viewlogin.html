@@ -1,0 +1,44 @@
+{% extends 'home.html' %}
+
+{% block content %}
+        <section class="content">
+            <div class="container-fluid" >
+                <div class="row" >
+                    <div class="col-12" style="margin-top: 150px;" >
+                        <div class="card" >
+                            <div class="card-header" >
+                                <h3 class="card-title">Students</h3>
+                            </div>
+                            <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>email</th>
+                                    <th>Password</th>
+                              
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for j in data %}
+                                <tr>
+                                    <td>{{j.email }}</td>
+                                    <td>{{j.password}}</td>
+                                   
+                                    
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</section>
+{% endblock %}
+<!-- /.content -->
